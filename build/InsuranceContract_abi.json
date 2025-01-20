@@ -1,0 +1,133 @@
+[
+  {
+    "anonymous": false,
+    "inputs": [
+      {
+        "indexed": true,
+        "internalType": "bytes12",
+        "name": "mongoDB_userId",
+        "type": "bytes12"
+      },
+      {
+        "indexed": false,
+        "internalType": "bytes32",
+        "name": "insuranceId",
+        "type": "bytes32"
+      },
+      {
+        "indexed": false,
+        "internalType": "bool",
+        "name": "approved",
+        "type": "bool"
+      },
+      {
+        "indexed": false,
+        "internalType": "uint256",
+        "name": "currentHumidity",
+        "type": "uint256"
+      },
+      {
+        "indexed": false,
+        "internalType": "uint256",
+        "name": "humidityThreshold",
+        "type": "uint256"
+      }
+    ],
+    "name": "ClaimResult",
+    "type": "event"
+  },
+  {
+    "anonymous": false,
+    "inputs": [
+      {
+        "indexed": true,
+        "internalType": "bytes12",
+        "name": "mongoDB_userId",
+        "type": "bytes12"
+      },
+      {
+        "indexed": false,
+        "internalType": "bytes32",
+        "name": "insuranceId",
+        "type": "bytes32"
+      }
+    ],
+    "name": "InsurancePurchased",
+    "type": "event"
+  },
+  {
+    "inputs": [
+      {
+        "internalType": "bytes32",
+        "name": "insuranceId",
+        "type": "bytes32"
+      },
+      {
+        "internalType": "bytes12",
+        "name": "mongoDB_userId",
+        "type": "bytes12"
+      },
+      {
+        "internalType": "uint256",
+        "name": "currentHumidity",
+        "type": "uint256"
+      }
+    ],
+    "name": "claimInsurance",
+    "outputs": [],
+    "stateMutability": "nonpayable",
+    "type": "function"
+  },
+  {
+    "inputs": [
+      {
+        "internalType": "bytes32",
+        "name": "",
+        "type": "bytes32"
+      }
+    ],
+    "name": "insurances",
+    "outputs": [
+      {
+        "internalType": "bytes12",
+        "name": "mongoDB_userId",
+        "type": "bytes12"
+      },
+      {
+        "internalType": "uint256",
+        "name": "humidityThreshold",
+        "type": "uint256"
+      },
+      {
+        "internalType": "bool",
+        "name": "claimed",
+        "type": "bool"
+      }
+    ],
+    "stateMutability": "view",
+    "type": "function"
+  },
+  {
+    "inputs": [
+      {
+        "internalType": "bytes32",
+        "name": "insuranceId",
+        "type": "bytes32"
+      },
+      {
+        "internalType": "bytes12",
+        "name": "mongoDB_userId",
+        "type": "bytes12"
+      },
+      {
+        "internalType": "uint256",
+        "name": "humidityThreshold",
+        "type": "uint256"
+      }
+    ],
+    "name": "purchaseInsurance",
+    "outputs": [],
+    "stateMutability": "nonpayable",
+    "type": "function"
+  }
+]
